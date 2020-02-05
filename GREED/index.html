@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>GREED</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./libraries/Bootstrap/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1 class="display-1">
+                    <span>G</span><span>R</span><span>E</span><span>E</span
+                    ><span>D</span>
+                </h1>
+                <button
+                    type="button"
+                    class="btn btn-info btn-sm"
+                    data-toggle="modal"
+                    data-target="#ModalCenter"
+                >
+                    Description
+                </button>
+
+                <div
+                    class="modal fade bd-example-modal-lg"
+                    id="ModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="ModalCenterTitle"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="modal-dialog modal-dialog-centered modal-lg"
+                        role="document"
+                    >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5
+                                    class="modal-title"
+                                    id="exampleModalLongTitle"
+                                >
+                                    Welcome to GREED
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                >
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                The object of Greed is to erase as much of the
+                                screen as possible by moving around in a grid of
+                                numbers. To move your cursor, simply use your
+                                arrow keys or the the 'wedcxzaq' keys. Your
+                                location is signified by the ! symbol.
+
+                                <hr />
+
+                                w = Up | e = UpRight | d = Right | c =DownRight
+                                | x = Down | z = DownLeft | a = Left | q =
+                                UpLeft
+
+                                <hr />
+
+                                When you move in a direction, you erase N number
+                                of grid squares in that direction, N being the
+                                first number in that direction. Your score
+                                reflects the total number of squares eaten.
+
+                                <hr />
+
+                                Greed will not let you make a move that would
+                                have placed you off the grid or over a
+                                previously eaten square. If no valid moves
+                                exist, your game ends.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-info btn-sm"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseOptions"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                >
+                    Options
+                </button>
+                <div class="collapse" id="collapseOptions">
+                    <div class="card card-body">
+                        <h3>
+                            Select Board Size
+                        </h3>
+                        <p class="lead">
+                            <button id="smallButton" class="btn btn-primary btn-lg">
+                                Small
+                            </button>
+                            <button id="mediumButton" class="btn btn-success btn-lg">
+                                Medium
+                            </button>
+                            <button id="largeButton" class="btn btn-warning btn-lg">
+                                Large
+                            </button>
+                            <button id="xtraLargeButton" class="btn btn-danger btn-lg">
+                                Extra-Large
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <button id="resetButton" type="button" class="btn btn-outline-danger">
+                    Reset
+                </button>
+            </div>
+        </div>
+        <div class="container text-center">
+            <h2 id="scoreBoard">0</h2>
+        </div>
+        <div class="container">
+            <table class="table table-borderless table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Row#</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="container" id="bar">
+            <div class="progress">
+                <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                >
+                    0%
+                </div>
+            </div>
+        </div>
+        <h2 id="showBoard" class="text-center">Welcome!</h2>
+        <script
+            src="./libraries/Jquery/jquery-3.4.1.min.js"
+        ></script>
+        <script
+            src="./libraries/Popper/popper.min.js"
+        ></script>
+        <script
+            src="./libraries/Bootstrap/js/bootstrap.min.js"
+        ></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
